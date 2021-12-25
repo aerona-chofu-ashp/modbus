@@ -1,0 +1,74 @@
+					COILS REGISTER - READ/WRITE
+Address	Address(hex)	Coil Value	Default Value	Controller Parameter	
+0	0	0			S01 61 Erase Error history??
+1	1	1		03 00	"Operation at the time of reboot after blackout
+0 = disable
+1 = enable"
+2	2	1		21 00	"H eating Zone1, enable Outgoing water set point  0=Fixed set point
+1=Climatic curve"
+3	3	0		21 10	"H eating Zone2, enable Outgoing water set point 0=Fixed set point
+1=Climatic curve enabled"
+4	4	0		21 20	"C ooling Zone1, enable Outgoing water set point  0=Fixed set point
+1=Climatic curve enabled"
+5	5	0		21 30	"C ooling Zone2, enable Outgoing water set point 0=Fixed set point
+1=Climatic Curve Enabled"
+6	6	0		31 40	"Anti-legionella function 0=disable
+1=enable"
+7	7	1		41 00	"The HP unit turns ON/OFF based on 
+0=Room set point 1
+1=Water set point"
+8	8	1		43 00	"Frost protection on room temperature
+0=disable
+1 = enable"
+9	9	1		43 10	"Frost protection by outdoor temperature
+0=disable
+1 = enable"
+10	000A	1		43 20 	"Frost protection based on Outgoing water temperature
+0=disable
+1 = enable"
+11	000B	1		43 30	"DHW storage frost protection
+0=disable
+1 = enable"
+12	000C	1		43 40	"Secondary system circuit frost protection
+0=disable
+1 = enable"
+13	000D	1		44 10	"Compensation for room humidity 0=disable
+1=enable"
+14	000E	1		46 10	"Conditions to be available Backup heaters
+0= always enabled
+1= dependent on Outdoor air temperature"
+15	000F	1		47 01	"Conditions to be available Backup heaters
+0= always enabled
+1= dependent on Outdoor air temperature"
+16	10	1		51 01	Terminal 1-2-3 : Remote Controller 1=enable
+17	11	0		51 04	"Terminal 4-5-6 : 3way mixing valve 0=disable
+1=enable"
+18	12	0		51 07	"Terminal 7-8 : DHW tank temperature probe 0=disable
+1=enable"
+19	13	0		51 09	"Terminal 9-10 : Outdoor air temperature probe  (additional)
+0=disable 1=enable"
+20	14	0		51 11	"Terminal 11-12 : Buffer tank temperature probe 0=disable
+1=enable"
+21	15	0		51 13	"Terminal 13-14 : Mix Water temperature probe 0=disable
+1=enable"
+22	16	1		51 15	"Terminal 15-16-32 : RS485 Mod Bus 0=disable
+1=enable"
+23	17	0		51 17	"Terminal 17-18 : Humidity sensor 0=disable
+1=enable"
+24	18	1		51 19	Terminal 19-18 : DHW remote contact 0=disable (Remote controller only) 1=enable
+25	19	1		51 22	"Terminal 22-23 : Dual set point control 0=disable
+1=enable"
+26	001A	1		51 26	"Terminal 26-27 : Flow switch 0=disable
+1=enable"
+27	001B	0		51 28	Terminal 28-29 : Night mode 0=disable (Remote controller only) 1=enable
+28	001C	0		51 30 	Terminal 30-31 : Low tariff 0=disable (Remote controller only) 1=enable
+29	001D	1		51 41	"Terminal 41-42 : EHS (External heat source for space heating)
+0=disable 1=enable"
+30	001E	0		51 43	Terminal 43-44 : Heating/Cooling mode output 0=disable 1=Indication of Cooling mode (CLOSE=Cooling) 2=indication of Heating mode (CLOSE=Heating)
+31	001F	0		51 45	"T erminal 45 : Dehumidifier 0=disable
+1=enable"
+32	20	0		51 46	"Terminal 46 : DHW Electric heater or Backup heater
+ 0=DHW Electric heater
+1=Backup heater"
+33	21	0			
+34	22	1			

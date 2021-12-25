@@ -1,0 +1,132 @@
+HOLDING REGISTER - READ/WRITE								
+Address	Address(hex)	Holding Register	Holding Register(hex)	Holding Register (binary)	Default Value	Unit	Parameter	Description
+0	0	0	0	00000000 00000000				
+1	1	0	0	00000000 00000000				
+2	2	450	01C2	00000001 11000010	45		21 01	Heating Zone1, Fixed Outgoing water set point in Heating 
+3	3	450	01C2	00000001 11000010	45		21 02	Max. Outgoing water temperature in Heating mode (Tm1) Zone1 
+4	4	300	012C	00000001 00101100	30		21 03	Min. Outgoing water temperature in Heating mode (Tm2) Zone1 
+5	5	40	28	00000000 00101000	0		21 04	Min. Outdoor air temperature corresponding to max. Outgoing water temperature (Te1) Zone1 
+6	6	200	00C8	00000000 11001000	20		21 05	Max. Outdoor air temperature corresponding to max. Outgoing water temperature (Te2) Zone1 
+7	7	450	01C2	00000001 11000010	45		21 11	Heating one2, ixed Outgoing water et point in Heating. 
+8	8	450	01C2	00000001 11000010	45		21 12	Max. Outgoing water temperature in Heating mode (Tm1) Zone2 
+9	9	300	012C	00000001 00101100	30		21 13	Min. Outgoing water temperature in Heating mode (Tm2) Zone2 
+10	000A	0	0	00000000 00000000	0		21 14	Min. Outdoor air temperature corresponding to max. Outgoing water temperature (Te1) Zone2 
+11	000B	200	00C8	00000000 11001000	20		21 15	Max. Outdoor air temperature corresponding to max. Outgoing water temperature (Te2) Zone2 
+12	000C	70	46	00000000 01000110	7		21 21	Heating Zone2, Fixed Outgoing water set point in Heating. 
+13	000D	200	00C8	00000000 11001000	20		21 22	Max. Outgoing water temperature in Cooling mode (Tm1) Zone1 
+14	000E	180	00B4	00000000 10110100	18		21 23	Min. Outgoing water temperature in Cooling mode (Tm2) Zone1 
+15	000F	250	00FA	00000000 11111010	25		21 24	Min. Outdoor air temperature corresponding to max. Outgoing water temperature (Te1) Zone1 
+16	10	350	015E	00000001 01011110	35		21 25	Max. Outdoor air temperature corresponding to max. Outgoing water temperature (Te2) Zone1 
+17	11	70	46	00000000 01000110	7		21 31	Cooling Zone2, Fixed Outgoing water set point in Cooling 
+18	12	200	00C8	00000000 11001000	20		21 32	Max. Outgoing water temperature in Cooling mode (Tm1) Zone2 
+19	13	180	00B4	00000000 10110100	18		21 33	Min. Outgoing water temperature in Cooling mode (Tm2) Zone2 
+20	14	250	00FA	00000000 11111010	25		21 34	Min. Outdoor air temperature corresponding to max. Outgoing water temperature (Te1) Zone2 
+21	15	350	015E	00000001 01011110	35		21 35	Max. Outdoor air temperature corresponding to max. Outgoing water temperature (Te2) Zone2 
+22	16	80	50	00000000 01010000	8		21 41	Hysteresis of water set point in Heating and DHW 
+23	17	80	50	00000000 01010000	8		21 42	Hysteresis of water set point in Cooling 
+24	18	50	32	00000000 00110010	5		21 51 	Low tariff deferential water set point for Heating 
+25	19	50	32	00000000 00110010	5		21 52	Low tariff deferential water set point for Cooling 
+26	001A	1	1	00000000 00000001	0		31 01	"DHW production priority setting
+0=DHW is unavailable
+1=DHW is available, and priority DHW over space
+Heating
+2=DHW is available, and priority space Heating over
+DHW"
+27	001B	1	1	00000000 00000001	1		31 02	"T ype of configuration to heat the DHW 
+0=Heat pump + Heater
+1=Heat pump only
+2=Heater only"
+28	001C	500	01F4	00000001 11110100	50		31 11	DHW Comort et temperature 
+29	001D	400	190	00000001 10010000	40		31 12	DHW Economy set temp
+30	001E	30	001E	00000000 00011110	3		31 13	DHW Set point hysterisis
+31	001F	600	258	00000010 01011000	60		31 14	DHW Over boost mode set point
+32	20	61	003D	00000000 00111101			31 21	Max. time for DHW request 
+33	21	30	001E	00000000 00011110	30		31 31	Delay time on DHW heater from OFF compressor
+34	22	65486	FFCE	11111111 11001110			31 33	Outdoor air temperature to enable DHW heaters
+35	23	50	32	00000000 00110010			31 34	Outdoor air temperature hysteresis to disable DHW heater
+36	24	650	028A	00000010 10001010			S 31 44	Anti-legionella set point
+37	25	80	50	00000000 01010000			41 11	Max. frequency of Night mode 
+38	26	0	0	00000000 00000000			41 21	Min. time compressor ON – OFF time
+39	27	30	001E	00000000 00011110			41 22	Delay time pump OFF from compressor OFF
+40	28	30	001E	00000000 00011110			41 23	Delay time compressor ON from pump ON 
+41	29	0	0	00000000 00000000			42 00	T ype of configuration of Main water pump 00 0=always ON, 1=ON/OFF based on Buffer tank temperature 2=ON/OFF based on Sniffing cycles 
+42	002A	3	3	00000000 00000011			42 01	Time ON Main water pump for Sniffing cycle. 
+43	002B	5	5	00000000 00000101			42 02	Time OFF Main water pump 
+44	002C	3	3	00000000 00000011			42 03	"Delay time OFF Main water pump
+from OFF compressor"
+45	002D	48	30	00000000 00110000			42 11	OFF time for Unlock pump function start
+46	002E	5	5	00000000 00000101			42 12	Time ON Main water pump for Unlock pump function 
+47	002F	5	5	00000000 00000101			42 13	Time ON water pump1 for Unlock pump function 
+48	30	5	5	00000000 00000101			42 14	Time ON water pump2 for Unlock pump function 
+49	31	0	0	00000000 00000000			42 20	"Type of operation of additional water pump
+0=disable
+1=depending on Main water pump setting 
+2=depending on Main water pump setting but always
+OFF when the DHW mode is activated   
+3= always ON, apart if any alarms are activated or if 
+the HP unit is in OFF mode   
+4=ON/OFF based on Room air temperature"
+50	32	140	008C	00000000 10001100			43 01	Start temperature of Frost protection on Room air 14.0 temperature 
+51	33	10	000A	00000000 00001010			43 02	Hysteresis of Room air temperature of Frost protection 
+52	34	350	015E	00000001 01011110			43 03	Water temperature of Frost protection 
+53	35	30	001E	00000000 00011110			43 04	Delay time OFF Main water pump from OFF Frost protection operation function 
+54	36	40	28	00000000 00101000			43 11	Start temperature of Frost protection on Outdoor air temperature 
+55	37	30	001E	00000000 00011110			43 12	Hysteresis of Outdoor air temperature 
+56	38	40	28	00000000 00101000			43 13	Backup heater set point during Frost protection 
+57	39	30	001E	00000000 00011110			43 14	Hysteresis of Outgoing water temperature 
+58	003A	50	32	00000000 00110010			43 31	Start temperature of Frost protection on DHW tank temperature 
+59	003B	30	001E	00000000 00011110			43 32	Hysteresis of DHW tank temperature 
+60	003C	60	003C	00000000 00111100			44 01	Room relative humidity value 
+61	003D	55	37	00000000 00110111			44 11	Room relative humidity value to start increasing Outgoing water temperature set point
+62	003E	100	64	00000000 01100100	10		44 12	Max. Outgoing temperature hysteresis corresponding  to 100% relative humidity 
+63	003F	12	000C	00000000 00001100			45 01	Mixing valve runtime (from the fully closed to the fully 120 open position)
+64	40	6	6	00000000 00000110			45 02	Mixing valve integral factor
+65	41	500	01F4	00000001 11110100			45 03	Max Water temperature in mixing circuit
+66	42	60	003C	00000000 00111100			45 11	3way valve change over time
+67	43	15	000F	00000000 00001111			45 21	Flow switch alarm delay time at. Pump start up
+68	44	2	2	00000000 00000010			45 22	Flow switch alarm delay time in steady operation of the water pump
+69	45	5	5	00000000 00000101			45 23	The number of retry until displaying alarm
+70	46	60	003C	00000000 00111100			45 24	The time of repeating retry until displaying alarm
+71	47	0	0	00000000 00000000			46 00	"Backup heater type of function 0=disable
+1=Replacement mode 2=Emergency mode 3=Supplementary mode"
+72	48	500	01F4	00000001 11110100			46 01	manual water set point
+73	49	50	32	00000000 00110010			46  02	Manual water temp hysteris
+74	004A	10	000A	00000000 00001010			46 03	ela time o te eater O tat aoid ow wit alarm 
+75	004B	5	5	00000000 00000101			46 04	Heater Activation delay time
+76	004C	598	256	00000010 01010110			46 05	Integration time for backup heater
+77	004D	65486	FFCE	11111111 11001110			46 11	Outdoor air temperature to enable Backup heaters and disable compressor
+78	004E	50	32	00000000 00110010			46 12	Outdoor air temperature hysteresis to disable Backup heaters and enable compressor
+79	004F	50	32	00000000 00110010			46 13	Outdoor air temperature to enable Backup heaters (Supplementary mode)
+80	50	50	32	00000000 00110010			46 14	Outdoor air temperature hysteresis to disable Backup heaters (Supplementary mode)
+81	51	0	0	00000000 00000000			46 20	"Freeze protection functions
+0=disable
+1=enabled during Start-up
+2=enabled during Defrost
+3=enabled during Start-up and Defrost"
+82	52	80	50	00000000 01010000			46 21	Outgoing water temperature set point during Start-up
+83	53	50	32	00000000 00110010			46 22	Hysteresis water temperature set point during Start-up
+84	54	0	0	00000000 00000000			47 00	"EHS type of function 0=disable
+1=Replacement mode 2=Supplementary mode"
+85	55	65486	FFCE	11111111 11001110			47 02	Outdoor air temperature to enable EHS and disable compressor
+86	56	50	32	00000000 00110010			47 03	Outdoor air temperature hysteresis to disable EHS and enable compressor
+87	57	50	32	00000000 00110010			47 04	Outdoor air temperature to enable EHS(Supplementary mode)
+88	58	50	32	00000000 00110010			47 05	Outdoor air temperature hysteresis to disable EHS(Supplementary mode)
+89	59	5	5	00000000 00000101			47 06	EHS activation delay time
+90	005A	64	40	00000000 01000000			47 07	Integration time for starting EHS 
+91	005B	1	1	00000000 00000001			51 20	"Terminal 20-21 : ON/OFF remote contact or EHS  Alarm input
+0=disable (Remote controller only)   1=ON/OFF remote contact
+2=EHS Alarm input"
+92	005C	0	0	00000000 00000000			51 24	"Terminal 24-25 : Heating/Cooling mode remote contact
+0=disable (Remote controller only)   1= Cooling is CLOSE contact, Heating is OPEN 
+contact.   2= Cooling is OPEN contact, Heating is CLOSE 
+contact"
+93	005D	0	0	00000000 00000000			51 47?	"T erminal 47 : Alarm (Configurable output) 0=disable
+1=Alarm
+2=Ambient temperature reached"
+94	005E	0	0	00000000 00000000				
+95	005F	0	0	00000000 00000000				RoomStat Master On/Off ??
+96	60	0	0	00000000 00000000				Roomstat Slave On/Off - unable to write
+97	61	195	00C3	00000000 11000011				Room set point target Master C
+98	62	250	00FA	00000000 11111010				Room set point target Slave C
+99	63	450	01C2	00000001 11000010				
+100	64	70	46	00000000 01000110				

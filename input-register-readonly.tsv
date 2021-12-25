@@ -1,0 +1,45 @@
+INPUT REGISTER - READ ONLY								
+Address	Address(hex)	Input Register	Input register(hex)	Input Register (binary)	Units	Parameter	Description	Translated value
+0	0	15	000F	00000000 00001111	1°C	01 00	Return water temperature 	
+1	1	0	0	00000000 00000000	1Hz 	01 01	Compressor operating frequency 	
+2	2	22	16	00000000 00010110	1°C 	01 02	Discharge temperature 	
+3	3	0	0	00000000 00000000	100W 	01 03	Current consumption value 	
+4	4	0	0	00000000 00000000	10rpm 	01 04	Fan control number of rotation 	
+5	5	12	000C	00000000 00001100	1°C 	01 05	Defrost temperature 	
+6	6	12	000C	00000000 00001100	1°C 	01 06	Outdoor air temperature 	
+7	7	0	0	00000000 00000000	100rpm	01 07	Water pump control number of rotation 	
+8	8	19	13	00000000 00010011	1°C 	01 08	Suction temperature 	
+9	9	18	12	00000000 00010010	1°C 	01 09	Outgoing water temperature 	
+10	000A	0	0	00000000 00000000		01 10	"Selected operating mode 
+0=Heating/Cooling OFF 
+1=Heating
+2=Cooling
+"	
+11	000B	195	00C3	00000000 11000011	0.5°C	01 11	Room air set temperature of Zone1(Master) - Target temp	
+12	000C	250	00FA	00000000 11111010	0.5°C 	01 12	Room air set temperature of Zone2(Slave) 	
+13	000D	0	0	00000000 00000000		01 13	"Selected DHW operating mode 0=disable
+1=Comfort
+2=Economy
+3=Force"	
+14	000E	0	0	00000000 00000000		01 14	"Day
+0=Monday, 1=Tuesday, 2=Wednesday, 3=Thursday, 4=Friday,5=Saturday, 6=Sunday"	
+15	000F	0	0	00000000 00000000				
+16	10	100	64	00000000 01100100		01 31	DHW tank temperature (Terminal 7-8)	
+17	11	65336	FF38	11111111 00111000		01 32	Outdoor air temperature (Terminal 9-10)	-200
+18	12	65336	FF38	11111111 00111000		01 33	Buffer tank temperature (Terminal 11-12)	-200
+19	13	65336	FF38	11111111 00111000		01 34	Mix water temperature (Terminal 13-14)	-200
+20	14	0	0	00000000 00000000		01 35	Humidity Sensor (Terminal 18-19)	
+21	15	32381	7E7D	01111110 01111101				
+22	16	32997	8.00E+06	10000000 11100101				-32539
+23	17	32996	8.00E+05	10000000 11100100				-32540
+24	18	32995	8.00E+04	10000000 11100011				-32541
+25	19	32994	8.00E+03	10000000 11100010				-32542
+26	001A	32993	8.00E+02	10000000 11100001				-32543
+27	001B	32945	80B1	10000000 10110001				-32591
+28	001C	32381	7E7D	01111110 01111101				32381
+29	001D	32381	7E7D	01111110 01111101				32381
+30	001E	32381	7E7D	01111110 01111101				32381
+31	001F	32381	7E7D	01111110 01111101				32381
+32	20	15	000F	00000000 00001111		01 72	Plate Heat Exchanger Temp	
+33	21	220	00DC	00000000 11011100			Indoor Master Temp Actual	
+34	22	400	190	00000001 10010000			Indoor Slave Temp Actual	
