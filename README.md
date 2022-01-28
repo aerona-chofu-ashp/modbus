@@ -22,7 +22,7 @@ Shopping list
    and Modbus-TCP (network) so in theory any interface supporting these
    should work.
 
-   This has been confirmed working with a (a [Hjelmslund
+   This has been confirmed working with a [Hjelmslund
    USB485-MB45](https://hjelmslund.eu/) isolated USB-RS485 converter:
    ![USB485-MB45](https://hjelmslund.eu/images/RS485%20cable%20modbus.jpg)
    and a [USR-W610 Wi-Fi/Ethernet to Modbus adapter](https://www.amazon.co.uk/gp/product/B07DNWM62H/):
@@ -152,14 +152,19 @@ to the HA `configuration.yaml` file (there is no configuration GUI).
    select it, and choose configuration.yaml.
 
 7. Copy and paste our [configuration.yaml fragment](home-assistant/configuration.yaml)
-   into your file.  Save it.
+   and add it to the end of your file.  Edit the connection settings at the
+   top of your `modbus:` section.  Save the file.
 
 8. In Configuration -> Settings click 'Check configuration', to ensure there
    are no syntax errors.  If all is good you can 'Restart' your Home
    Assistant.
 
 9. Various `ASHP ...` readings should now show in 'Entities', and in the
-   Sensors box on the front page, if you haven't configured that otherwise.
+   Sensors box on the front page, if using the default panel.
+
+10. If you click on a reading, a graph of the reading will be shown.  You
+   can also access graphs via the History page, like any other Home Assistant
+   data.
 
 
 Further reading
