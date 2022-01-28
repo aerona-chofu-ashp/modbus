@@ -165,7 +165,7 @@ to the HA `configuration.yaml` file (there is no configuration GUI).
 10. If you click on a reading, a graph of the reading will be shown.  You
    can also access graphs via the History page, like any other Home Assistant
    data.
-
+   ![Home Assistant graph](images/ha-graph.png)
 
 Further reading
 ---------------
