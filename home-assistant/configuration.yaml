@@ -1,0 +1,99 @@
+
+modbus:
+  - name: ashp
+    type: serial
+    baudrate: 19200
+    bytesize: 8
+    method: rtu
+    parity: N
+    port: /dev/ttyUSB0
+    stopbits: 2
+#  - name: "ashp"
+#    type: tcp
+#    host: 192.168.99.99
+#    port: 502
+    sensors:
+      - name: "ASHP Return water temperature"
+        slave: 1
+        address: 0
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Compressor operating frequency"
+        slave: 1
+        address: 1
+        input_type: input
+        unit_of_measurement: Hz
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Discharge temperature"
+        slave: 1
+        address: 2
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Current consumption value"
+        slave: 1
+        address: 3
+        input_type: input
+        unit_of_measurement: W
+        scale: 100.000000
+        state_class: measurement
+      - name: "ASHP Fan control number of rotation"
+        slave: 1
+        address: 4
+        input_type: input
+        unit_of_measurement: rpm
+        scale: 10.000000
+        state_class: measurement
+      - name: "ASHP Defrost temperature"
+        slave: 1
+        address: 5
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Outdoor air temperature"
+        slave: 1
+        address: 6
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Water pump control number of rotation"
+        slave: 1
+        address: 7
+        input_type: input
+        unit_of_measurement: rpm
+        scale: 100.000000
+        state_class: measurement
+      - name: "ASHP Suction temperature"
+        slave: 1
+        address: 8
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Outgoing water temperature"
+        slave: 1
+        address: 9
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Plate Heat Exchanger Temp"
+        slave: 1
+        address: 32
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Indoor Master Temp Actual"
+        slave: 1
+        address: 33
+        input_type: input
+        unit_of_measurement: °C
+        scale: 0.100000
+        state_class: measurement
