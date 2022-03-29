@@ -1,9 +1,9 @@
 					DISCRETE INPUTS - READ
-Address	Address(hex)	Value	Default Value		
+Address	Address(hex)	Value	Default Value	Parameter	Description
 0	0	0			
 1	1	0			
 2	2	0			
-3	3	0			
+3	3	0			Configurable input (terminal 20-21) / heating enable
 4	4	1			
 5	5	0			
 6	6	0			
