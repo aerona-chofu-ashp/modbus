@@ -1,5 +1,5 @@
 					DISCRETE INPUTS - READ
-Address	Address(hex)	Value	Default Value		
+Address	Address(hex)	Value	Default Value	Parameter	Description
 0	0	0			
 1	1	0			
 2	2	0			

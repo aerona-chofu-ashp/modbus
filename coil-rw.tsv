@@ -1,5 +1,5 @@
 					COILS REGISTER - READ/WRITE
-Address	Address(hex)	Coil Value	Default Value	Controller Parameter	
+Address	Address(hex)	Coil Value	Default Value	Controller Parameter	Description
 0	0	0			S01 61 Erase Error history??
 1	1	1		03 00	"Operation at the time of reboot after blackout
 0 = disable
