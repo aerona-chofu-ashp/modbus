@@ -1,0 +1,113 @@
+# This configuration file segment is for using the following gateway; USR-TCP232-304 Serial RS485 to TCP/IP Ethernet Server Converter Module with Built-in Webpage DHCP/DNS Supported
+# rename this file to configuration.yaml
+# Make sure to add your host ip address and your chosen port address
+# Change unique IDs to your own format should you need to
+# Change scales and scan intervals as to your requirements.
+
+
+modbus:
+  - name: aerona3
+    type: tcp
+    host: 192.168.1.XX
+    port: XXXX
+    delay: 5
+    close_comm_on_error: false
+    retry_on_empty: true
+    retries: 10
+    sensors:
+      - name: "ASHP Aerona3 Return water temperature"
+        unique_id: aeyc-0643xu-ch-input-1-0
+        slave: 1
+        address: 0
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Aerona3 Compressor Operating Frequency"
+        unique_id: aeyc-0643xu-ch-input-1-1
+        slave: 1
+        address: 1
+        count: 1
+        input_type: input
+        scan_interval: 5
+        unit_of_measurement: Hz
+      - name: "ASHP Discharge temperature"
+        unique_id: aeyc-0643xu-ch-input-1-2
+        slave: 1
+        address: 2
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Current consumption value"
+        unique_id: aeyc-0643xu-ch-input-1-3
+        slave: 1
+        address: 3
+        input_type: input
+        unit_of_measurement: W
+        scale: 100.000000
+        state_class: measurement
+      - name: "ASHP Fan control number of rotation"
+        unique_id: aeyc-0643xu-ch-input-1-4
+        slave: 1
+        address: 4
+        input_type: input
+        unit_of_measurement: rpm
+        scale: 10.000000
+        state_class: measurement
+      - name: "ASHP Defrost temperature"
+        unique_id: aeyc-0643xu-ch-input-1-5
+        slave: 1
+        address: 5
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Outdoor air temperature"
+        unique_id: aeyc-0643xu-ch-input-1-6
+        slave: 1
+        address: 6
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Water pump control number of rotation"
+        unique_id: aeyc-0643xu-ch-input-1-7
+        slave: 1
+        address: 7
+        input_type: input
+        unit_of_measurement: rpm
+        scale: 100.000000
+        state_class: measurement
+      - name: "ASHP Suction temperature"
+        unique_id: aeyc-0643xu-ch-input-1-8
+        slave: 1
+        address: 8
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Outgoing water temperature"
+        unique_id: aeyc-0643xu-ch-input-1-9
+        slave: 1
+        address: 9
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Plate Heat Exchanger Temp"
+        unique_id: aeyc-0643xu-ch-input-1-32
+        slave: 1
+        address: 32
+        input_type: input
+        unit_of_measurement: °C
+        scale: 1.000000
+        state_class: measurement
+      - name: "ASHP Indoor Master Temp Actual"
+        unique_id: aeyc-0643xu-ch-input-1-33
+        slave: 1
+        address: 33
+        input_type: input
+        unit_of_measurement: °C
+        scale: 0.100000
+        state_class: measurement
