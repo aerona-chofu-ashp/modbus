@@ -152,8 +152,10 @@ to the HA `configuration.yaml` file (there is no configuration GUI).
    select it, and choose configuration.yaml.
 
 7. Copy and paste our [configuration.yaml fragment](home-assistant/configuration.yaml)
-   and add it to the end of your file.  Edit the connection settings at the
+   and add it to the end of your file.  Edit the connection settings at the 
    top of your `modbus:` section.  Save the file.
+   
+   If using an ethernet gateway, you can use the following [configuration.yaml fragment](home-assistant/configuration-modbus-tcp-rtuovertcp-gateway.yaml) 
 
 8. In Configuration -> Settings click 'Check configuration', to ensure there
    are no syntax errors.  If all is good you can 'Restart' your Home
