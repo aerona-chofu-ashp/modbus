@@ -95,6 +95,14 @@ modbus:
         unit_of_measurement: °C
         scale: 1.000000
         state_class: measurement
+      - name: "ASHP DHW Temp (7-8)"
+        unique_id: aeyc-0643xu-ch-input-1-16
+        slave: 1
+        address: 16
+        input_type: input
+        unit_of_measurement: °C
+        scale: 0.100000
+        state_class: measurement
       - name: "ASHP Plate Heat Exchanger Temp"
         unique_id: aeyc-0643xu-ch-input-1-32
         slave: 1
