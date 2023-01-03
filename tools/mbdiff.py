@@ -72,7 +72,7 @@ def diff_tables(defns, a, b):
     avalues = a.values()
     bvalues = b.values()
     for key in akeys:
-        for reg in range(1,len(avalues)):
+        for reg in range(1,len(a[key])):
             if a[key][reg] != b[key][reg]:
                 defn = get_definition(defns, key, reg)
                 table_label = definition_labels[key-1] % (key)
