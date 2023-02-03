@@ -1,0 +1,143 @@
+esphome:
+  name: ashp
+
+esp32:
+  board: nodemcu-32s
+
+wifi: !include wifi.yaml
+api:
+
+logger:
+
+ota:
+
+uart:
+  - rx_pin: GPIO23
+    tx_pin: GPIO22
+    baud_rate: 19200
+    stop_bits: 2
+    data_bits: 8
+    id: hp_uart
+    parity: NONE
+
+modbus:
+  - id: hp_modbus
+    uart_id: hp_uart
+
+modbus_controller:
+  - id: hp_controller
+    address: 0x1
+    modbus_id: hp_modbus
+    setup_priority: -10
+    update_interval: 30s
+
+sensor:
+  - platform: modbus_controller
+    name: "Heat Pump Return Water Temperature"
+    register_type: read
+    address: 0
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Compressor Operating Frequency"
+    register_type: read
+    address: 1
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: Hz
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Discharge Temperature"
+    register_type: read
+    address: 2
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Current Consumption Value"
+    register_type: read
+    address: 3
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: W
+    filters:
+      multiply: 100.000000
+  - platform: modbus_controller
+    name: "Heat Pump Fan Control RPM"
+    register_type: read
+    address: 4
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: rpm
+    filters:
+      multiply: 10.000000
+  - platform: modbus_controller
+    name: "Heat Pump Defrost Temperature"
+    register_type: read
+    address: 5
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Outdoor Air Temperature"
+    register_type: read
+    address: 6
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Water Pump Control RPM"
+    register_type: read
+    address: 7
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: rpm
+    filters:
+      multiply: 100.000000
+  - platform: modbus_controller
+    name: "Heat Pump Suction Temperature"
+    register_type: read
+    address: 8
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Outgoing Water Temperature"
+    register_type: read
+    address: 9
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Plate Heat Exchanger Temperature"
+    register_type: read
+    address: 32
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 1.000000
+  - platform: modbus_controller
+    name: "Heat Pump Indoor Master Temperature Actual"
+    register_type: read
+    address: 33
+    value_type: U_WORD
+    modbus_controller_id: hp_controller
+    unit_of_measurement: °C
+    filters:
+      multiply: 0.100000
+

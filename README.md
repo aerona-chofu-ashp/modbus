@@ -169,6 +169,15 @@ to the HA `configuration.yaml` file (there is no configuration GUI).
    data.
    ![Home Assistant graph](images/ha-graph.png)
 
+
+ESPHome
+-------
+
+[grantstephens](https://github.com/grantstephens) contributed [a config for
+ESPHome](esphome/ashp.yaml) for monitoring with a serial to RS485 converter.
+
+
+
 Further reading
 ---------------
 
