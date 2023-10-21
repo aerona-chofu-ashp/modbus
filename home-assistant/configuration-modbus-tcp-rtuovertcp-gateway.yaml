@@ -11,8 +11,6 @@ modbus:
     host: 192.168.1.XX
     port: XXXX
     delay: 5
-    close_comm_on_error: false
-    retry_on_empty: true
     retries: 10
     sensors:
       - name: "ASHP Aerona3 Return water temperature"
@@ -27,7 +25,6 @@ modbus:
         unique_id: aeyc-0643xu-ch-input-1-1
         slave: 1
         address: 1
-        count: 1
         input_type: input
         scan_interval: 5
         unit_of_measurement: Hz
